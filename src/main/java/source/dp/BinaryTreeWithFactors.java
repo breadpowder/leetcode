@@ -17,6 +17,8 @@ public class BinaryTreeWithFactors {
 
         Map<Integer, Integer> s = new HashMap<Integer,Integer>();
 
+        
+
         for(int i=0; i<A.length; i++){
             s.put(A[i],i);
             dp[i] =1;

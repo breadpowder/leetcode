@@ -34,7 +34,6 @@ public class BestToBuyandSellstockWithCooldown {
 
         dp[2] = 0;
 
-
         for(int i=1; i<prices.length; i++){
 
             int hold = Math.max(dp[0], dp[2]- prices[i]);

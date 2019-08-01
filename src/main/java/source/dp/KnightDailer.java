@@ -32,7 +32,6 @@ public class KnightDailer {
 
     public int knightDialer(int N) {
 
-
         int module = 1000000007;
 
         //dp[i][N]
