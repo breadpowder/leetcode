@@ -1,8 +1,5 @@
 package source.search;
 
-
-import scala.Int;
-
 import java.util.*;
 
 public class TestABC {

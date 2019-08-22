@@ -1,7 +1,5 @@
 package source;
 
-import scala.Char;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
