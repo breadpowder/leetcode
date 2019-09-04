@@ -1,5 +1,7 @@
 package question.divideAndConquer.others
 
+//https://www.youtube.com/watch?v=KB9IcSCDQ9k&t=825s
+// see two things: one is m1+ m2 =  (n1+n2+ 1)/2, the other is the out of boundry condition m1, m2
 object MedianOfTwoSortedArray {
 
 
@@ -8,6 +10,7 @@ object MedianOfTwoSortedArray {
 
       val idx=(start + end)/2
       arr(idx)
+
 
   }
 

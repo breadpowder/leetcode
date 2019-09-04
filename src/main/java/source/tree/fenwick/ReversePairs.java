@@ -90,6 +90,12 @@ public class ReversePairs {
             }
         }
 
+        // 2,6, 1
+
+        // 1,2,6
+
+
+
 
         BIT bits = new BIT(id+1);
 
