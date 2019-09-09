@@ -18,6 +18,7 @@ public class DecodeStringAtIndex {
         StringInStack(String s, int idx, int number){
 
 
+            
             this.s= s;
             this.number = number;
             this.idx = idx;
@@ -31,6 +32,8 @@ public class DecodeStringAtIndex {
 
         List<StringInStack> lss = new LinkedList<StringInStack>();
 
+        
+
         lss.add(0, new StringInStack("",1, 1));
 
         int start = 0;
@@ -38,6 +41,7 @@ public class DecodeStringAtIndex {
 
             char ch = S.charAt(i);
             if( ch - '0' >=0 && ch - '9' <=0){
+
 
                 String s = S.substring(start, i+1);
 

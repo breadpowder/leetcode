@@ -49,7 +49,7 @@ public class MaximumWidthRamp {
 
 
             if(A[i]<minHead) {
-                monotonicallyDecreasing.add(0, i);
+                monotonicallyDecreasing.add(i);
                 minHead = A[i];
             }
         }
@@ -66,8 +66,6 @@ public class MaximumWidthRamp {
         for(int j=A.length-1; j>0; j--){
 
               int idx =  binarySearch(decreaseArr, 0, decreaseArr.length-1, A[j], A);
-
-              System.out.println(A[decreaseArr[idx]] + "," + A[j]);
 
               if(idx!=decreaseArr.length) {
 
@@ -98,7 +96,7 @@ public class MaximumWidthRamp {
 
         return maxLength;
     }
-
+/*
     int binarySearch(Integer[] decreasingArr, int low, int high, int num, int[] A){
 
         //minus one, c
@@ -113,6 +111,25 @@ public class MaximumWidthRamp {
         else return binarySearch(decreasingArr, mid+1, high, num, A);
 
     }
+*/
+
+
+int binarySearch(Integer[] decreasingArr, int low, int high, int num, int[] A){
+
+    while(low<=high){
+        int mid = (low + high)/2;
+
+        if(A[decreasingArr[mid]]<=num) high = mid-1;
+
+        else low = mid+1;
+    }
+
+    return low;
+
+}
+
+
+
 
     public static void main(String[] args){
 
