@@ -36,7 +36,9 @@ Example 3:3
 Input: amount = 10, coins = [10]
 Output: 1
 
+
  */
+
 
 import java.util.Arrays;
 
@@ -44,6 +46,12 @@ import java.util.Arrays;
 //1->2 and 2->1 are different, the first version ensure the coin arrnage from big to small, i.e. 2,1 ->3 not 1,2 goes to 3
 
 //see https://www.youtube.com/watch?v=ZKAILBWl08g&t=827s
+//  DP method:
+// 1)dp[i][j] = dp[i-1][j] + dp[i-1][j-coins[i]] + dp[i-1][j-2*coins[i]] ... + dp[i-1][j-m*coins[i]]
+//  2) dp[i][j-coins[i]] = dp[i-1][j-coins[i]] ... + dp[i-1][j-m*coins[i]]
+
+
+// Space optimization: dp[j] = dp[j] + dp[j-coins[i]]
 public class CoinChange2 {
 
     public int change(int amount, int[] coins) {

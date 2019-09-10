@@ -20,7 +20,11 @@ package source.stack;
 
 */
 
-//review 394 like a state machine
+//review 394
+
+// 2[a..d2[a...z]a...z2[a...z]]
+
+// each stack level corresponds to one level of [],after resolve a stack level, we can always combine with previous level
 
 import java.util.LinkedList;
 
@@ -29,15 +33,15 @@ public class DecodeString {
 
         LinkedList<StringBuffer> strs = new LinkedList<StringBuffer>();
 
+        strs.add(0, new StringBuffer(""));
         LinkedList<Integer> nums = new LinkedList<Integer>();
 
         char[] chs = s.toCharArray();
 
-        StringBuffer result = new StringBuffer();
-
+        //StringBuffer result = new StringBuffer();
 
         StringBuffer tmp = null;
-        int count = 0;
+        //int count = 0;
 
         //...3[a2[c]df]..
         for(int i=0; i <chs.length; i++){
@@ -45,13 +49,13 @@ public class DecodeString {
 
             char ch = chs[i];
             if(ch=='[') {
-                count ++ ;
+                // count ++ ;
                 tmp = new StringBuffer();
                 strs.add(0, tmp);
             }
 
             else if(ch==']'){
-                count--;
+                //count--;
 
                 StringBuffer str = strs.removeFirst();
                 StringBuffer sb = new StringBuffer();
@@ -61,13 +65,13 @@ public class DecodeString {
                 for(int j=0; j< num; j++){
                     sb.append(str);
                 }
-                if(count==0) {
-                    result.append(sb.toString());
-                }
-                else{
-                    if(!strs.isEmpty()) sb = strs.removeFirst().append(sb);
-                    strs.add(0, sb);
-                }
+                //if(count==0) {
+                //    result.append(sb.toString());
+                //}
+                //else{
+                if(!strs.isEmpty()) sb = strs.removeFirst().append(sb);
+                strs.add(0, sb);
+                //}
             }
 
 
@@ -81,9 +85,9 @@ public class DecodeString {
             }
 
 
-            else if(count==0){
-                result.append(chs[i]);
-            }
+            //else if(count==0){
+            //    result.append(chs[i]);
+            // }
 
 
             else {
@@ -93,7 +97,8 @@ public class DecodeString {
 
         }
 
-        return result.toString();
+        return strs.removeFirst().toString();
+
 
     }
 

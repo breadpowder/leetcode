@@ -5,9 +5,11 @@ import java.util.Map;
 
 //take away
 
-//ComputeIfAbsent returns the key -> values
+//1. ComputeIfAbsent returns the key -> values
 
-//return deleteRecursively(root, s, -1) is a function that need to review idx starts from -1, also postOrder
+//2. Do delete method since it is non-trivial return deleteRecursively(root, s, -1) is a function that need to review idx starts from -1, also postOrder'
+
+
 
 public class Trie {
 

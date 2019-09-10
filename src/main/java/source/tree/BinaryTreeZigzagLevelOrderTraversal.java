@@ -60,6 +60,8 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 
                 TreeNode t = q.poll();
                 level.add(t.val);
+
+                //TODO see here, do not add null
                 if(t.left != null) q.add(t.left);
                 if(t.right!=null) q.add(t.right);
 

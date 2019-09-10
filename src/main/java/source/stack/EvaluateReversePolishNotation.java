@@ -75,6 +75,7 @@ public class EvaluateReversePolishNotation {
     }
 
 
+
     public int calculate(List<Integer> operands, String operator){
 
         int right = operands.remove(0);

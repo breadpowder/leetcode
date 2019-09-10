@@ -39,6 +39,9 @@ What limitation we need to add to the question to allow negative numbers?
 
 Credits:
 Special thanks to @pbrother for adding this problem and creating all test cases.
+
+
+Todo: see this question, 1,1,2 and 2,1,1 it can be duplicated
  */
 
 public class CombinationSumVI {

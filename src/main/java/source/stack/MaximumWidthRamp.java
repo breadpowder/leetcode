@@ -8,8 +8,6 @@ Given an array A of integers, a ramp is a tuple (i, j) for which i < j and A[i] 
 
 Find the maximum width of a ramp in A.  If one doesn't exist, return 0.
 
-
-
 Example 1:
 
 Input: [6,0,8,2,1,5]
